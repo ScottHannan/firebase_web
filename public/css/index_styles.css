@@ -1,0 +1,307 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.image {
+  width: 400px;
+  height: 300px;
+  background-size: cover;
+  margin: 50px 20px;
+  border-radius: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.image::before {
+  position: absolute;
+  display: block;
+  content: "";
+  border-radius: 30px;
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#1affffff',GradientType=0 );
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.image::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transform: scale(0.9);
+  top: 40px;
+  background-size: cover;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.image.scottdog,
+.image.scottdog:after {
+  width: 90%;
+  height: 90%;
+  background: url("../img/scott-dog.jpeg") center center no-repeat;
+  background-size: cover;
+}
+
+.image.scottcoder,
+.image.scottcoder:after {
+  width: 90%;
+  height: 90%;
+  background: url("../img/scott-home.jpeg") center center no-repeat;
+  background-size: cover;
+}
+
+.image.scottcomfy,
+.image.scottcomfy:after {
+  width: 90%;
+  height: 90%;
+  background: url("../img/scott-comfy.jpeg") center center no-repeat;
+  background-size: cover;
+}
+
+.image.scottbright,
+.image.scottbright:after {
+  width: 90%;
+  height: 90%;
+  background: url("../img/scott-bright.jpeg") center center no-repeat;
+  background-size: cover;
+}
+
+.block {
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  color: black;
+  border: 2px solid #f05d5e;
+  padding: 14px 28px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+  margin-bottom: 0.25px;
+}
+
+.block:hover {
+  display: inline;
+  background-color: #f05d5e;
+  transition: 0.5s;
+  color: white;
+}
+
+.block:hover span {
+  padding-right: 25px;
+}
+.block span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.block span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.block:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.box {
+  background-color: #e7ecef;
+  display: flex;
+  height: 90vh;
+}
+
+.longbox {
+  background-color: rgb(240, 93, 94, 0.9);
+  margin: auto;
+  width: 60%;
+  height: 90%;
+}
+
+.top {
+  width: 100%;
+}
+
+.shortbox {
+  background-color: #0f7173;
+  margin: auto;
+  width: 40%;
+  height: 95%;
+}
+
+.header {
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  line-height: 50px;
+  background-color: #ffffff;
+}
+
+.header * {
+  display: inline;
+  height: 50px;
+}
+
+blockquote {
+  font-size: 1.4em;
+  width: 60%;
+  margin: 50px auto;
+  font-family: Open Sans;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #f05d5e;
+  line-height: 1.6;
+  position: relative;
+  background: #ededed;
+}
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #020a07;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+blockquote::after {
+  content: "";
+}
+
+blockquote span {
+  display: block;
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+h1 {
+  position: relative;
+  padding: 0;
+  margin: 6px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.title h1 {
+  font-size: 400%;
+  font-weight: 500;
+  text-transform: uppercase;
+  z-index: 1;
+  position: relative;
+}
+.title h1:before {
+  background-color: #f05d5e;
+  border-radius: 0.25rem;
+  content: "";
+  display: block;
+  height: 0.25rem;
+  width: 42px;
+  margin-bottom: 1.25rem;
+}
+
+.bright {
+  margin-bottom: 40%;
+}
+
+.animal {
+  margin-bottom: 40%;
+}
+
+.techie {
+  margin-bottom: 40px;
+}
+
+.buton {
+  border: 2px solid #f05d5e;
+  padding: 30px 60px;
+  display: inline;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-size: 24px;
+  font-family: sans-serif;
+  transition: all 0.5s;
+}
+
+.buton:before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  margin: auto;
+  position: relative;
+  top: -100%;
+  left: -100%;
+  background: #212121;
+  transition: all 0.5s;
+  z-index: -1;
+}
+.buton:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  margin: auto;
+  position: relative;
+  top: 100%;
+  left: 100%;
+  background: #212121;
+  transition: all 0.5s;
+  z-index: -1;
+}
+.buton:hover {
+  color: #f05d5e;
+}
+.buton:hover:before {
+  top: 0;
+  left: 0;
+}
+.buton:hover:after {
+  transform: rotateY(90deg);
+}
+
+.nolink {
+  text-decoration: none;
+}
